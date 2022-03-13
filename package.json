@@ -1,0 +1,19 @@
+{
+  "name": "oc-dw-p3",
+  "version": "1.0.0",
+  "description": "Projet 3 parcours développeur Web Openclassrooms (dynamiser un site web)",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charles-Forgeard/Forgeard_3_13032022.git"
+  },
+  "author": "Charles Forgeard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charles-Forgeard/Forgeard_3_13032022/issues"
+  },
+  "homepage": "https://github.com/Charles-Forgeard/Forgeard_3_13032022#readme"
+}
