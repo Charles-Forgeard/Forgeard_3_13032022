@@ -1,17 +1,14 @@
-*,
-*::after,
-*::before {
+body{
+    margin: 0;
+}
+
+body *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    list-style: none;
 }
 
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
-}
-
-body {
-    box-sizing: border-box;
-    background: $colour-secondary;
+a{
+    color: inherit;
 }

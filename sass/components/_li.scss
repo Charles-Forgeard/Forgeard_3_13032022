@@ -1,0 +1,40 @@
+.fonctionnement ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 26px;
+    li{
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        width: 323px;
+        height: 72px;
+        background-color:#F6F6F6;
+        border-radius: 17px;
+        margin-left: 12px;
+        position: relative;
+    }
+    li:before{
+        content:'';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        color: white;
+        position: absolute;
+        left: 0;
+        background-color: $colour-primary;
+        transform: translateX(-50%);
+    }
+    li:first-child:before{
+        content:'1';
+    }
+    li:nth-child(2):before{
+        content:'2';
+    }
+    li:nth-child(3):before{
+        content:'3';
+    }
+}

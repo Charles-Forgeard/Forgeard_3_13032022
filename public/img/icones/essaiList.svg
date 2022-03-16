@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icone" width="200px" height="200px" viewBox="0 0 200 200">
+    <circle fill="currentColor" cx="30" cy="28" r="18"/>
+    <circle fill="currentColor" cx="30" cy="100" r="18"/>
+    <circle fill="currentColor" cx="30" cy="172" r="18"/>
+    <rect fill="currentColor" x="76" y="15" width="124" height="26"/>
+    <rect fill="currentColor" x="76" y="87" width="124" height="26"/>
+    <rect fill="currentColor" x="76" y="159" width="124" height="26"/>
+</svg>

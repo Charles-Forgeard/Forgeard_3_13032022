@@ -1,0 +1,42 @@
+.icone.mobile{
+    width: 13px;
+    height: 20px;
+}
+
+.icone.essaiList{
+    width: 17px;
+    height: 17px;
+}
+
+.icone.store{
+    width: 18px;
+    height: 18px;
+    color: $colour-primary;
+    path{
+        transform-origin: center;
+        transform: scale(1.06,1.125);
+    }
+}
+
+.icone.GPS{
+    width: 12px;
+    height: 16px;
+}
+
+.icone.heart{
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    top: 23px;
+    right: 24px;
+    path{
+        transform-origin: center;
+        transform: scale(1.255, 1.346);
+    }
+}
+
+.fonctionnement svg{
+    position: absolute;
+    left: 10%;
+
+}

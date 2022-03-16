@@ -1,0 +1,40 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0 63px 0;
+    > *{
+        width: 335px;
+    }
+    &.recherche{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color:#EAEAEA;
+    }
+    &.presentation{
+        row-gap: 11px;
+        padding-top: 38px;
+        p{
+            width: 307px;
+        }
+        h1{
+            width: 250px;
+        }
+    }
+    &.fonctionnement{
+        row-gap: 28px;
+    }
+    &.restaurants{
+        row-gap: 18px;
+    }
+    &:first-child{
+        padding: 0;
+    }
+
+}
+
+.presentation, .restaurants{
+    background-color: #F6F6F6;
+}
