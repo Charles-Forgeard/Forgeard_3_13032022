@@ -2,12 +2,17 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 50px 0 63px 0;
     > *{
         width: 335px;
     }
+    .menu{
+        width: 100%;
+        max-width: 349px;
+    }
     &.recherche{
-        display: flex;
         justify-content: center;
         align-items: center;
         height: 50px;
@@ -17,7 +22,7 @@ section{
         row-gap: 11px;
         padding-top: 38px;
         p{
-            width: 307px;
+            max-width: 307px;
         }
         h1{
             width: 250px;
@@ -25,9 +30,10 @@ section{
     }
     &.fonctionnement{
         row-gap: 28px;
+        background-color: $colour-white;
     }
     &.restaurants{
-        row-gap: 18px;
+        gap: 18px;
     }
     &:first-child{
         padding: 0;
@@ -36,5 +42,61 @@ section{
 }
 
 .presentation, .restaurants{
-    background-color: #F6F6F6;
+    background-color: $colour-background;
+}
+
+footer{
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 0 34px 0;
+    .logo{
+        margin-bottom: 17px;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+    }
+}
+
+main.menu{
+    border-radius: clamp(0px, calc(4000vw / 375), 149px);
+    background-color: $colour-background;
+    padding: 31px 12px 0;
+    margin-bottom: 83px;
+    position: relative;
+    z-index: 2;
+    h1{
+        margin: auto;
+        max-width: 339px;
+    }
+    section{
+        margin: auto;
+        max-width: 375px;
+        padding: 22px 0 10px;
+    }
+}
+
+.overflow-x-hidden{
+    overflow: hidden;
+    margin-bottom: calc(-5600% / 375);
+}
+
+img.menu{
+    width: 110%;
+    transform: translateX(calc(-1875% / 412.5));
+    display: block;
+}
+
+body > div{
+    aspect-ratio: 335/251;
+}
+
+img.specialAlign{
+    width: 102%;
+    transform: translateY(-15.5%);
+    &.menu{
+        width: 100%;
+        transform: translateY(-20.5%);
+    }
 }

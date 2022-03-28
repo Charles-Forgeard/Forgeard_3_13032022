@@ -27,8 +27,8 @@
     position: absolute;
     width: 23px;
     height: 21px;
-    top: 23px;
-    right: 24px;
+    top: calc(2300% / 77);
+    right: calc(2400% / 335);
     path{
         transform-origin: center;
         transform: scale(1.255, 1.346);
@@ -37,6 +37,6 @@
 
 .fonctionnement svg{
     position: absolute;
-    left: 10%;
+    left: calc(3400% / 323);
 
 }

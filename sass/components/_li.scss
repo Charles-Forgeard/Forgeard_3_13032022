@@ -5,11 +5,11 @@
     row-gap: 26px;
     li{
         display: flex;
-        place-items: center;
-        justify-content: center;
+        align-items: center;
+        padding: 0 calc(2100% / 323) 0 calc(7400% / 323);
         width: 323px;
         height: 72px;
-        background-color:#F6F6F6;
+        background-color: $colour-background;
         border-radius: 17px;
         margin-left: 12px;
         position: relative;

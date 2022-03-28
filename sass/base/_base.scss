@@ -1,5 +1,13 @@
+html{
+    background-color: $colour-white;
+}
+
 body{
     margin: 0;
+    background-color: $colour-background;
+    max-width: 1430px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 body *{
@@ -10,5 +18,10 @@ body *{
 }
 
 a{
+    text-decoration: unset;
     color: inherit;
+}
+
+.card,.presentation a, .fonctionnement li{
+    box-shadow: 4px 7px 15px -4px #E6E6E6; 
 }

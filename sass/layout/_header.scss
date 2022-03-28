@@ -2,5 +2,21 @@ header{
     height: 63px;
     display: flex;
     justify-content: center;
+    align-items: baseline;
     padding-top: 14px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
+    background-color: $colour-white;
+    .logo{
+        width: 100%;
+        max-width: 329px;
+        text-align: center;
+        display: inline-block;
+    }
+    .left-arrow{
+        position: absolute;
+        top: 26px;
+        left: 23px;
+    }
 }

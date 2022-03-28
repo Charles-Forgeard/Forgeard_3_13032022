@@ -1,10 +1,10 @@
-body, button, input#recherche-input {
+body, input#recherche-input {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
 }
 
-.logo {
+.logo{
     font-family: 'Shrikhand', cursive;
     font-size: 30px;
     font-weight: 400;
@@ -15,14 +15,35 @@ h1, h2{
     font-weight: 700;
 }
 
+h1.menu{
+    font-family: 'Shrikhand', cursive;
+    font-size: 28px;
+    font-weight: 400;
+} 
+
+h2.menu{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 6px;
+    &:after{
+        position: absolute;
+        bottom: 0;
+        left: 6px;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: $colour-tertiary;
+    }
+}
+
 .presentation{
     text-align: center;
     p{
         font-size: 18px;
         font-weight: 300;
-    }
-    button{
-        color: white;
     }
 }
 
@@ -30,6 +51,15 @@ h1, h2{
     h3{
         font-size: 18px;
         font-weight: 900;
+    }
+    &.menu h3{
+        font-weight: 700;
+    }
+    &.menu p{
+        font-size: 15px;
+        span{
+            font-weight: 900;
+        }
     }
     p{
     font-size: 17px;

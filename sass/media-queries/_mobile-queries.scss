@@ -1,0 +1,51 @@
+@media screen and (max-width: 374px){
+    section > *, footer > *{
+        width: calc(33500% / 375);
+    }
+}
+
+@media screen and (min-width: 767px){
+
+    section:nth-child(2), section:nth-child(3){
+        display: inline-flex;
+        width: 50%;
+    }
+    main.menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        h1{
+            text-align: center;
+            width: 100%;
+            max-width: unset;
+        }
+        section{
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .restaurants{
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: inset 0px 7px 16px -11px rgba(0,0,0,0.15);
+        padding-left: 18px;
+        padding-right: 18px;
+        h2{
+            width: 100%;
+            max-width: unset;
+            text-align: center;
+        }
+    }
+    footer{
+        ul{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        > *{
+        width: 688px
+        }
+    }
+    
+
+}
