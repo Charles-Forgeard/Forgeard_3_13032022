@@ -85,7 +85,7 @@ h2.menu:after {
 .card.menu p {
   font-size: 15px;
 }
-.card.menu p span {
+.card.menu p .prix {
   font-weight: 900;
 }
 .card p {
@@ -191,9 +191,16 @@ a.menu {
 }
 .card.menu p {
   margin-top: 4px;
-  float: bottom;
 }
-.card.menu span {
+.card.menu span:not(.prix) {
+  display: inline-block;
+  overflow-x: hidden;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 261px;
+  text-overflow: ellipsis;
+}
+.card.menu .prix {
   float: right;
 }
 .card .newSticker {
@@ -213,6 +220,10 @@ a.menu {
   width: 103.5%;
   align-self: center;
   transform: translateY(-29%);
+}
+.card img[src*=stil] {
+  width: 101.5%;
+  transform: translateY(-15.5%);
 }
 .card img + div {
   display: flex;
@@ -266,6 +277,18 @@ a.menu {
 }
 .fonctionnement ol li:nth-child(3):before {
   content: "3";
+}
+
+img.menu {
+  width: 110%;
+  flex-shrink: 0;
+}
+img.menu[src*=louis-hansel-shotsoflouis] {
+  width: 107%;
+}
+img.menu[src*=stil] {
+  width: 100%;
+  align-self: center;
 }
 
 header {
@@ -369,28 +392,12 @@ main.menu section {
   padding: 22px 0 10px;
 }
 
-.overflow-x-hidden {
-  overflow: hidden;
-  margin-bottom: -14.9333333333%;
-}
-
-img.menu {
-  width: 110%;
-  transform: translateX(-4.5454545455%);
-  display: block;
-}
-
 body > div {
-  aspect-ratio: 335/251;
-}
-
-img.specialAlign {
-  width: 102%;
-  transform: translateY(-15.5%);
-}
-img.specialAlign.menu {
-  width: 100%;
-  transform: translateY(-20.5%);
+  overflow: hidden;
+  margin-bottom: -15.2%;
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 335/249;
 }
 
 form {

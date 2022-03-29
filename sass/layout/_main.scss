@@ -77,26 +77,10 @@ main.menu{
     }
 }
 
-.overflow-x-hidden{
-    overflow: hidden;
-    margin-bottom: calc(-5600% / 375);
-}
-
-img.menu{
-    width: 110%;
-    transform: translateX(calc(-1875% / 412.5));
-    display: block;
-}
-
 body > div{
-    aspect-ratio: 335/251;
-}
-
-img.specialAlign{
-    width: 102%;
-    transform: translateY(-15.5%);
-    &.menu{
-        width: 100%;
-        transform: translateY(-20.5%);
-    }
+    overflow: hidden;
+    margin-bottom: calc(-5700% / 375);
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 335/249;
 }

@@ -1,0 +1,11 @@
+img.menu{
+    width: 110%;
+    flex-shrink: 0;
+    &[src*="louis-hansel-shotsoflouis"]{
+        width: 107%;
+    }
+    &[src*="stil"]{
+        width: 100%;
+        align-self: center;
+    }
+}

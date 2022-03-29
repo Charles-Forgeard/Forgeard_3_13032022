@@ -1,7 +1,6 @@
 .card{
     display: flex;
     justify-content: center;
-    // height: 251px;
     aspect-ratio: 335/251;
     overflow: hidden;
     position: relative;
@@ -14,9 +13,16 @@
             margin-top: 14px;
             p{
                 margin-top: 4px;
-                float: bottom;
             }
-            span{
+            span:not(.prix){
+                display: inline-block;
+                overflow-x: hidden;
+                white-space: nowrap;
+                width: 100%;
+                max-width: 261px;
+                text-overflow: ellipsis;
+            }
+            .prix{
                 float: right;
             }
         }
@@ -37,6 +43,10 @@
             width: 103.5%;
             align-self: center;
             transform: translateY(-29%);
+            &[src*="stil"]{
+                width: 101.5%;
+                transform: translateY(-15.5%);
+            }
             + div{
                 display: flex;
                 flex-direction: column;
