@@ -157,16 +157,36 @@ a.menu {
   height: 16px;
 }
 
+#heartClipPath path {
+  transform: scale(0.00455, 0.00535) translate(-7%, -13.5%);
+}
+
 .icone.heart {
-  position: absolute;
   width: 23px;
   height: 21px;
-  top: 29.8701298701%;
-  right: 7.1641791045%;
+  margin-right: 12px;
+  position: relative;
 }
-.icone.heart path {
-  transform-origin: center;
-  transform: scale(1.255, 1.346);
+.icone.heart::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBmb2N1c2FibGU9InRydWUiIGlkPSJibGFja0hlYXJ0IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4NCiAgICA8cGF0aA0KICAgICAgICB0cmFuc2Zvcm0tb3JpZ2luPSJjZW50ZXIiDQogICAgICAgIHRyYW5zZm9ybT0ic2NhbGUoMS4yNywgMS4zNzYpIg0KICAgICAgICBmaWxsPSJibGFjayIgDQogICAgICAgIGQ9Ik0xMjggMjIwLjJhMTMuNiAxMy42IDAgMCAxLTkuOS00LjFMMzUgMTMzYTU4IDU4IDAgMCAxIDIuMi04NC4yYTU2LjUgNTYuNSAwIDAgMSA0MS42LTE0YTYyLjggNjIuOCAwIDAgMSA0MC4zIDE4LjNMMTI4IDYybDExLTExYTU3LjkgNTcuOSAwIDAgMSA4NC4xIDIuMmE1Ni4yIDU2LjIgMCAwIDEgMTQuMSA0MS42YTYyLjggNjIuOCAwIDAgMS0xOC4zIDQwLjNsLTgxIDgxYTEzLjYgMTMuNiAwIDAgMS05LjkgNC4xWm01LjYtOC4zWk03NSA0Ni43YTQ0IDQ0IDAgMCAwLTI5LjcgMTEuMWE0NS44IDQ1LjggMCAwIDAtMS44IDY2LjdsODMuMSA4My4xYTEuOSAxLjkgMCAwIDAgMi44IDBsODEtODFjMTguMi0xOC4yIDE5LjktNDcuNSAzLjgtNjUuM2E0NS44IDQ1LjggMCAwIDAtNjYuNy0xLjhsLTE1LjMgMTUuMmE2LjEgNi4xIDAgMCAxLTguNSAwbC0xMy4xLTEzLjFBNTAuMyA1MC4zIDAgMCAwIDc1IDQ2LjdaIj4NCiAgICA8L3BhdGg+DQo8L3N2Zz4=");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+.icone.heart::after {
+  content: "";
+  top: 6.5px;
+  left: 0px;
+  display: block;
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 0%, transparent 0%);
+  clip-path: url("#heartClipPath");
 }
 
 .fonctionnement svg {
@@ -186,11 +206,17 @@ a.menu {
 .card.menu {
   aspect-ratio: unset;
   display: block;
-  padding: 12px 10px;
+  padding: 12px 70px 12px 10px;
   margin-top: 14px;
+}
+.card.menu h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .card.menu p {
   margin-top: 4px;
+  white-space: nowrap;
 }
 .card.menu span:not(.prix) {
   display: inline-block;
@@ -201,7 +227,26 @@ a.menu {
   text-overflow: ellipsis;
 }
 .card.menu .prix {
-  float: right;
+  position: absolute;
+  right: 22px;
+}
+.card.menu .check {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  transition: width 0.5s;
+}
+.card h3 {
+  min-width: 50%;
+  align-self: flex-end;
+}
+.card p {
+  min-width: 50%;
+  align-self: flex-start;
+  white-space: nowrap;
 }
 .card .newSticker {
   position: absolute;
@@ -227,15 +272,16 @@ a.menu {
 }
 .card img + div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   row-gap: 3px;
   width: 100%;
   height: 30.6772908367%;
   background-color: white;
   position: absolute;
   bottom: 0;
-  padding: 0 20% 0 3.8805970149%;
+  padding: 0 3.8805970149% 0 3.8805970149%;
 }
 
 .fonctionnement ol {
@@ -291,6 +337,210 @@ img.menu[src*=stil] {
   align-self: center;
 }
 
+@keyframes grow {
+  0% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 0%, transparent 0%);
+  }
+  10% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 10%, transparent 10%);
+  }
+  20% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 20%, transparent 20%);
+  }
+  30% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 30%, transparent 30%);
+  }
+  40% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 40%, transparent 40%);
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 50%, transparent 50%);
+  }
+  60% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 60%, transparent 60%);
+  }
+  70% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, transparent 70%);
+  }
+  80% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 80%, transparent 80%);
+  }
+  90% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 90%, transparent 90%);
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%, transparent 100%);
+  }
+}
+.icone.heart:hover::after {
+  animation: 0.5s linear forwards grow;
+}
+
+.card.menu {
+  opacity: 0;
+  transition: padding-right 0.5s;
+}
+.card.menu .prix {
+  transition: right 0.5s;
+}
+
+.card.menu:hover {
+  padding-right: 127px;
+}
+.card.menu:hover .prix {
+  right: 79px;
+}
+
+.card.menu:hover .check {
+  width: 59px;
+}
+
+.card.menu::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%) translateX(59px) rotate(0deg);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1pYyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPg0KICAgIDxwYXRoIA0KICAgICAgICBmaWxsPSJ3aGl0ZSIgDQogICAgICAgIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwczEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0tMiAxNWwtNS01bDEuNDEtMS40MUwxMCAxNC4xN2w3LjU5LTcuNTlMMTkgOGwtOSA5eiI+DQogICAgPC9wYXRoPg0KPC9zdmc+");
+  background-size: 100% 100%;
+  width: 23px;
+  height: 23px;
+  transition: transform 0.5s;
+}
+
+@keyframes spread {
+  from {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 14px;
+  }
+}
+.card.menu:hover::after {
+  transform: translateY(-50%) translateX(0%) rotate(360deg);
+}
+
+.card.menu:nth-child(2) {
+  animation: 0.5s linear 3s forwards spread;
+}
+
+.card.menu:nth-child(3) {
+  animation: 0.5s linear 3.3s forwards spread;
+}
+
+.card.menu:nth-child(4) {
+  animation: 0.5s linear 3.6s forwards spread;
+}
+
+.card.menu:nth-child(5) {
+  animation: 0.5s linear 3.9s forwards spread;
+}
+
+.spinnerContainer {
+  position: absolute;
+  top: 143px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  animation: 0s linear 3s forwards opacityTo0;
+  z-index: -1;
+}
+
+.spinner {
+  --background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #9356DC;
+  position: relative;
+  animation: 5s linear 0s infinite running rotate;
+  --sens: 1;
+}
+
+.spinner > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 4px solid;
+  position: absolute;
+  animation: 1s linear 0s infinite reverse polygon, 4s linear 0s infinite running rotate;
+}
+
+.spinner::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 8px solid var(--background-color);
+  border-radius: 50%;
+  animation: 1s linear 0s infinite reverse polygon, 4s linear 0s infinite running rotateTranslate;
+}
+
+.circleOne {
+  border-color: #FF79DA;
+  --sens: -2;
+  width: 75%;
+  height: 75%;
+}
+
+.circleTwo {
+  border-color: #99E2D0;
+  --sens: 1;
+  width: 50%;
+  height: 50%;
+}
+
+.circleTree {
+  border-color: #353535;
+  --sens: -3;
+  width: 25%;
+  height: 25%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(calc(360deg * var(--sens)));
+  }
+}
+@keyframes rotateTranslate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(calc(360deg * var(--sens)));
+  }
+}
+@keyframes polygon {
+  from {
+    clip-path: polygon(-100% -100%, 200% -100%, 50% 50%, -100% 200%);
+  }
+  50% {
+    clip-path: polygon(-100% -100%, 50% -100%, 50% 50%, -100% 50%);
+  }
+  to {
+    clip-path: polygon(-100% -100%, 200% -100%, 50% 50%, -100% 200%);
+  }
+}
+@keyframes opacityTo0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 header {
   height: 63px;
   display: flex;
@@ -390,6 +640,7 @@ main.menu section {
   margin: auto;
   max-width: 375px;
   padding: 22px 0 10px;
+  position: relative;
 }
 
 body > div {

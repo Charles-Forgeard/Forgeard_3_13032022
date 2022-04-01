@@ -12,14 +12,14 @@
 @import "./components/li";
 @import "./components/img.menu";
 
+@import "./animations/icones";
+@import "./animations/cards";
+@import "./animations/spinner";
+
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/main";
 @import "./layout/form";
 @import "./layout/footer";
-
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
 
 @import "./media-queries/mobile-queries";

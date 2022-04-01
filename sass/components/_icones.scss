@@ -23,20 +23,39 @@
     height: 16px;
 }
 
+#heartClipPath path{
+    transform: scale(0.00455,0.00535) translate(-7%, -13.5%);
+}
+
 .icone.heart{
-    position: absolute;
     width: 23px;
     height: 21px;
-    top: calc(2300% / 77);
-    right: calc(2400% / 335);
-    path{
-        transform-origin: center;
-        transform: scale(1.255, 1.346);
+    margin-right: 12px;
+    position: relative;
+    &::before{
+        content:'';
+        position: absolute;
+        top: 6px;
+        left:0;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBmb2N1c2FibGU9InRydWUiIGlkPSJibGFja0hlYXJ0IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4NCiAgICA8cGF0aA0KICAgICAgICB0cmFuc2Zvcm0tb3JpZ2luPSJjZW50ZXIiDQogICAgICAgIHRyYW5zZm9ybT0ic2NhbGUoMS4yNywgMS4zNzYpIg0KICAgICAgICBmaWxsPSJibGFjayIgDQogICAgICAgIGQ9Ik0xMjggMjIwLjJhMTMuNiAxMy42IDAgMCAxLTkuOS00LjFMMzUgMTMzYTU4IDU4IDAgMCAxIDIuMi04NC4yYTU2LjUgNTYuNSAwIDAgMSA0MS42LTE0YTYyLjggNjIuOCAwIDAgMSA0MC4zIDE4LjNMMTI4IDYybDExLTExYTU3LjkgNTcuOSAwIDAgMSA4NC4xIDIuMmE1Ni4yIDU2LjIgMCAwIDEgMTQuMSA0MS42YTYyLjggNjIuOCAwIDAgMS0xOC4zIDQwLjNsLTgxIDgxYTEzLjYgMTMuNiAwIDAgMS05LjkgNC4xWm01LjYtOC4zWk03NSA0Ni43YTQ0IDQ0IDAgMCAwLTI5LjcgMTEuMWE0NS44IDQ1LjggMCAwIDAtMS44IDY2LjdsODMuMSA4My4xYTEuOSAxLjkgMCAwIDAgMi44IDBsODEtODFjMTguMi0xOC4yIDE5LjktNDcuNSAzLjgtNjUuM2E0NS44IDQ1LjggMCAwIDAtNjYuNy0xLjhsLTE1LjMgMTUuMmE2LjEgNi4xIDAgMCAxLTguNSAwbC0xMy4xLTEzLjFBNTAuMyA1MC4zIDAgMCAwIDc1IDQ2LjdaIj4NCiAgICA8L3BhdGg+DQo8L3N2Zz4=");
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+    }
+    &::after{
+        content:'';
+        top: 6.5px;
+        left: 0px;
+        display: block;
+        position: absolute;
+        width: 101%;
+        height: 101%;
+        background: linear-gradient(0deg, #FF79DA 0%, #9356DC 0%, transparent 0%);
+        clip-path: url("#heartClipPath");
     }
 }
 
 .fonctionnement svg{
     position: absolute;
     left: calc(3400% / 323);
-
 }

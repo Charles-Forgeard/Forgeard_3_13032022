@@ -9,10 +9,16 @@
         &.menu{
             aspect-ratio: unset;
             display: block;
-            padding: 12px 10px;
+            padding: 12px 70px 12px 10px;
             margin-top: 14px;
+            h3{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
             p{
                 margin-top: 4px;
+                white-space: nowrap;
             }
             span:not(.prix){
                 display: inline-block;
@@ -23,8 +29,28 @@
                 text-overflow: ellipsis;
             }
             .prix{
-                float: right;
+                position: absolute;
+                right: 22px;
             }
+            .check{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 0px;
+                height: 100%;
+                background-color: $colour-tertiary;
+                transition: width 0.5s;
+
+            }
+        }
+        h3{
+            min-width: 50%;
+            align-self: flex-end;
+        } 
+        p{
+            min-width: 50%;
+            align-self: flex-start;
+            white-space: nowrap;
         }
         .newSticker{
             position: absolute;
@@ -49,15 +75,16 @@
             }
             + div{
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
                 row-gap: 3px;
                 width: 100%;
                 height: calc(7700% / 251);
                 background-color: white;
                 position: absolute;
                 bottom: 0;
-                padding: 0 calc(7100% / 355) 0 calc(1300% / 335);
+                padding: 0 calc(1300% / 335) 0 calc(1300% / 335);
             }
         }
 }
