@@ -6,6 +6,13 @@
     position: relative;
     border-radius: 14px / 12px;
     background-color: white;
+    transition: box-shadow 0.5s;
+        &:not(.menu):hover{
+            box-shadow: 4px 7px 15px -4px black;
+            img{
+                filter: brightness(110%);
+            }
+        }
         &.menu{
             aspect-ratio: unset;
             display: block;

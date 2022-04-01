@@ -10,7 +10,6 @@
 }
 
 .spinner{
-    --background-color: white;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -41,7 +40,7 @@
     left: 50%;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-    border: 8px solid var(--background-color);
+    border: 8px solid $colour-background;
     border-radius: 50%;
     animation: 1s linear 0s infinite reverse polygon, 4s linear 0s infinite running rotateTranslate;
 }

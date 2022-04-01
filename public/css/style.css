@@ -22,7 +22,7 @@ a {
   color: inherit;
 }
 
-.card, .presentation a, .fonctionnement li {
+.card, .button, .fonctionnement li {
   box-shadow: 4px 7px 15px -4px #E6E6E6;
 }
 
@@ -106,7 +106,7 @@ footer .regular {
   font-weight: 400;
 }
 
-.presentation a, a.menu {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,14 +117,20 @@ footer .regular {
   border: none;
   background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
   color: #fff;
+  transition: filter 0.3s, box-shadow 0.3s;
+}
+.button:hover {
+  filter: brightness(110%);
+  box-shadow: 4px 7px 15px -4px black;
 }
 
-a.menu {
+.menu.button {
   width: 186px;
   margin: 40px calc(50% - 93px) 0;
 }
 
 .left-arrow {
+  box-sizing: content-box;
   display: inline-flex;
   align-items: center;
   width: 18px;
@@ -164,13 +170,13 @@ a.menu {
 .icone.heart {
   width: 23px;
   height: 21px;
-  margin-right: 12px;
+  margin-right: 11px;
   position: relative;
 }
 .icone.heart::before {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 14px;
   left: 0;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBmb2N1c2FibGU9InRydWUiIGlkPSJibGFja0hlYXJ0IiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4NCiAgICA8cGF0aA0KICAgICAgICB0cmFuc2Zvcm0tb3JpZ2luPSJjZW50ZXIiDQogICAgICAgIHRyYW5zZm9ybT0ic2NhbGUoMS4yNywgMS4zNzYpIg0KICAgICAgICBmaWxsPSJibGFjayIgDQogICAgICAgIGQ9Ik0xMjggMjIwLjJhMTMuNiAxMy42IDAgMCAxLTkuOS00LjFMMzUgMTMzYTU4IDU4IDAgMCAxIDIuMi04NC4yYTU2LjUgNTYuNSAwIDAgMSA0MS42LTE0YTYyLjggNjIuOCAwIDAgMSA0MC4zIDE4LjNMMTI4IDYybDExLTExYTU3LjkgNTcuOSAwIDAgMSA4NC4xIDIuMmE1Ni4yIDU2LjIgMCAwIDEgMTQuMSA0MS42YTYyLjggNjIuOCAwIDAgMS0xOC4zIDQwLjNsLTgxIDgxYTEzLjYgMTMuNiAwIDAgMS05LjkgNC4xWm01LjYtOC4zWk03NSA0Ni43YTQ0IDQ0IDAgMCAwLTI5LjcgMTEuMWE0NS44IDQ1LjggMCAwIDAtMS44IDY2LjdsODMuMSA4My4xYTEuOSAxLjkgMCAwIDAgMi44IDBsODEtODFjMTguMi0xOC4yIDE5LjktNDcuNSAzLjgtNjUuM2E0NS44IDQ1LjggMCAwIDAtNjYuNy0xLjhsLTE1LjMgMTUuMmE2LjEgNi4xIDAgMCAxLTguNSAwbC0xMy4xLTEzLjFBNTAuMyA1MC4zIDAgMCAwIDc1IDQ2LjdaIj4NCiAgICA8L3BhdGg+DQo8L3N2Zz4=");
   background-size: 100% 100%;
@@ -179,7 +185,7 @@ a.menu {
 }
 .icone.heart::after {
   content: "";
-  top: 6.5px;
+  top: 14.5px;
   left: 0px;
   display: block;
   position: absolute;
@@ -202,6 +208,13 @@ a.menu {
   position: relative;
   border-radius: 14px/12px;
   background-color: white;
+  transition: box-shadow 0.5s;
+}
+.card:not(.menu):hover {
+  box-shadow: 4px 7px 15px -4px black;
+}
+.card:not(.menu):hover img {
+  filter: brightness(110%);
 }
 .card.menu {
   aspect-ratio: unset;
@@ -450,7 +463,6 @@ img.menu[src*=stil] {
 }
 
 .spinner {
-  --background-color: white;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -480,7 +492,7 @@ img.menu[src*=stil] {
   left: 50%;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
-  border: 8px solid var(--background-color);
+  border: 8px solid #F6F6F6;
   border-radius: 50%;
   animation: 1s linear 0s infinite reverse polygon, 4s linear 0s infinite running rotateTranslate;
 }
@@ -666,6 +678,12 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #353535;
+}
+footer a {
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #99E2D0;
 }
 
 footer > * {
