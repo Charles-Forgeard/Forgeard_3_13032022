@@ -30,7 +30,7 @@ input {
   border: none;
 }
 
-body, input#recherche-input {
+body, input#recherche-input, .button {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -657,7 +657,7 @@ footer ul {
   row-gap: 7px;
 }
 
-main.menu {
+.main.menu {
   border-radius: clamp(0px, 10.6666666667vw, 149px);
   background-color: #F6F6F6;
   padding: 31px 12px 0;
@@ -665,11 +665,11 @@ main.menu {
   position: relative;
   z-index: 2;
 }
-main.menu h1 {
+.main.menu h1 {
   margin: auto;
   max-width: 339px;
 }
-main.menu section {
+.main.menu section {
   margin: auto;
   max-width: 375px;
   padding: 22px 0 10px;
@@ -684,13 +684,13 @@ body > div {
   aspect-ratio: 335/249;
 }
 
-form {
+form.accueil {
   display: flex;
   column-gap: 18px;
   max-width: max-content;
   transform: translateX(30px);
 }
-form input#recherche-input {
+form.accueil input#recherche-input {
   border: none;
   background-color: transparent;
 }
@@ -722,18 +722,18 @@ footer > * {
     width: 50%;
   }
 
-  main.menu {
+  .main.menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
   }
-  main.menu h1 {
+  .main.menu h1 {
     text-align: center;
     width: 100%;
     max-width: unset;
   }
-  main.menu section {
+  .main.menu section {
     margin: 0;
     width: 100%;
   }
