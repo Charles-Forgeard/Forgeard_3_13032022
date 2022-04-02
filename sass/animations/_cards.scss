@@ -6,14 +6,14 @@
     }
 }
 
-.card.menu:hover{
+.card.menu:hover, .card.menu.checked{
     padding-right: 127px;
     .prix{
         right: 79px;
     }
 }
 
-.card.menu:hover .check{
+.card.menu:hover .check, .card.menu.checked .check{
     width: 59px;
 }
 
@@ -41,7 +41,7 @@
     }
 }
 
-.card.menu:hover::after{
+.card.menu:hover::after, .card.menu.checked::after{
     transform: translateY(-50%) translateX(0%) rotate(360deg);
 }
 

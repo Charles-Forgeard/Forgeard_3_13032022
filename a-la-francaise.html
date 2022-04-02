@@ -120,5 +120,18 @@
         </ul>
 
     </footer>
+    <script>
+        const inputsEl = document.getElementsByTagName("input");
+        for (const el of inputsEl){
+            el.addEventListener('change', event =>{
+                let parent = el.parentNode;
+                if(parent.classList.contains("checked")){
+                    parent.classList.remove("checked")
+                }else{
+                    parent.classList.add("checked")
+                }
+            })
+        }
+    </script>
 </body>
 </html>

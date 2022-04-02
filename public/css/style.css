@@ -401,14 +401,14 @@ img.menu[src*=stil] {
   transition: right 0.5s;
 }
 
-.card.menu:hover {
+.card.menu:hover, .card.menu.checked {
   padding-right: 127px;
 }
-.card.menu:hover .prix {
+.card.menu:hover .prix, .card.menu.checked .prix {
   right: 79px;
 }
 
-.card.menu:hover .check {
+.card.menu:hover .check, .card.menu.checked .check {
   width: 59px;
 }
 
@@ -435,7 +435,7 @@ img.menu[src*=stil] {
     margin-top: 14px;
   }
 }
-.card.menu:hover::after {
+.card.menu:hover::after, .card.menu.checked::after {
   transform: translateY(-50%) translateX(0%) rotate(360deg);
 }
 
@@ -693,6 +693,10 @@ form.accueil {
 form.accueil input#recherche-input {
   border: none;
   background-color: transparent;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 footer {
