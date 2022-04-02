@@ -1,12 +1,21 @@
-.spinnerContainer{
-    position: absolute;
-    top: 143px; 
-    left: 50%;
-    transform: translateX(-50%);
+body.menu > *{
+    visibility: hidden;
+    animation: 0s linear 3s forwards visibilityToV;
+}
+
+body.menu .spinnerContainer, body.menu .spinnerContainer *{
+    visibility: visible;
+}
+
+body.menu .spinnerContainer{
+    position: fixed;
+    top: 50vh; 
+    left: 50vw;
+    transform: translate(-50%,-50%);
     width: 100px;
     height: 100px;
-    animation: 0s linear 3s forwards opacityTo0;
-    z-index: -1;
+    animation: 0s linear 3s forwards z-indexTo-1;
+    z-index: 3;
 }
 
 .spinner{
@@ -98,11 +107,20 @@
     }
 }
 
-@keyframes opacityTo0{
+@keyframes z-indexTo-1{
     from{
-        opacity: 1;
+        z-index: 1;
     }
     to{
-        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes visibilityToV{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
     }
 }
