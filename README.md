@@ -4,7 +4,7 @@ Projet N°3 V:18/03/2022 - formation développeur Web - OpenClassrooms
 
 Ce repository contient le projet numéro 3 du parcours proposé par OpenClassrooms pour obtenir le diplôme de développeur Web.
 
-Ce projet intitulé: "Dynamisez une page web avec des animations CSS", propose de réaliser l'intégration d'une maquette de site web mobile first (voir [maquettes](https://github.com/Charles-Forgeard/Forgeard_3_13032022/blob/master/Maquettes\ Ohmyfood/maquettes/)).
+Ce projet intitulé: "Dynamisez une page web avec des animations CSS", propose de réaliser l'intégration d'une maquette de site web mobile first (voir [maquettes](https://github.com/Charles-Forgeard/Forgeard_3_13032022/blob/master/Maquettes+Ohmyfood/maquettes/)).
 L'objectif étant de développer ces compétences:
 - Mettre en place son environnement Front-End
 - Assurer la cohérence graphique d'un site web
