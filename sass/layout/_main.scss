@@ -65,7 +65,26 @@ footer{
     z-index: 2;
     h1{
         margin: auto;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
         max-width: 339px;
+        .icone{
+            margin: 0 20px 0 5px;
+            &::before{
+                top: 0;
+                right: 0;
+                left: unset;
+                width: 23px
+            }
+            &::after{
+                top: 0.5px;
+                right: -0.5px;
+                left: unset;
+                width: 23px
+            }
+        }
     }
     section{
         margin: auto;

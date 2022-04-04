@@ -15,9 +15,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
         h1{
-            text-align: center;
-            width: 100%;
-            max-width: unset;
+            margin: 0 calc(50% - 12px - 334.5px) 0 calc(50% - 12px - 334.5px);
         }
         section{
             margin: 0;
