@@ -12,12 +12,6 @@ section{
         width: 100%;
         max-width: 349px;
     }
-    &.recherche{
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        background-color:#EAEAEA;
-    }
     &.presentation{
         row-gap: 11px;
         padding-top: 38px;
@@ -35,11 +29,16 @@ section{
     &.restaurants{
         gap: 18px;
     }
-    &:first-child{
-        padding: 0;
-    }
-
 }
+
+.recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color:#EAEAEA;
+}
+
 
 .presentation, .restaurants{
     background-color: $colour-background;

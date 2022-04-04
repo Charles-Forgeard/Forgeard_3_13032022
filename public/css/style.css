@@ -204,6 +204,18 @@ footer .regular {
   left: 10.5263157895%;
 }
 
+.icone.handshake {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}
+
+.icone.utensils {
+  width: 16px;
+  height: 13px;
+  vertical-align: baseline;
+}
+
 .card {
   display: flex;
   justify-content: center;
@@ -620,12 +632,6 @@ section .menu {
   width: 100%;
   max-width: 349px;
 }
-section.recherche {
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #EAEAEA;
-}
 section.presentation {
   row-gap: 11px;
   padding-top: 38px;
@@ -643,8 +649,13 @@ section.fonctionnement {
 section.restaurants {
   gap: 18px;
 }
-section:first-child {
-  padding: 0;
+
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #EAEAEA;
 }
 
 .presentation, .restaurants {
@@ -717,6 +728,10 @@ footer a {
 }
 footer a:hover {
   color: #99E2D0;
+}
+footer a .icone {
+  margin-right: 5px;
+  margin-left: -2px;
 }
 
 footer > * {
