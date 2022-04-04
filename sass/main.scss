@@ -1,7 +1,6 @@
-@import "./utils/variables";
-@import "./utils/functions";
+
 @import "./utils/mixins";
-@import "./utils/extensions";
+@import "./utils/variables";
 
 @import "./base/_base.scss";
 @import "./base/typography";
@@ -12,12 +11,12 @@
 @import "./components/li";
 @import "./components/img.menu";
 
+@import "./animations/keyframes";
 @import "./animations/icones";
 @import "./animations/cards";
 @import "./animations/spinner";
 
 @import "./layout/header";
-@import "./layout/nav";
 @import "./layout/main";
 @import "./layout/form";
 @import "./layout/footer";

@@ -1,7 +1,6 @@
 header{
     height: 63px;
-    display: flex;
-    justify-content: center;
+    @include flexJustCenter;
     align-items: baseline;
     padding-top: 14px;
     position: relative;

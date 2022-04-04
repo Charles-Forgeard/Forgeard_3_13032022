@@ -1,6 +1,5 @@
 .card{
-    display: flex;
-    justify-content: center;
+    @include flexJustCenter;
     aspect-ratio: 335/251;
     overflow: hidden;
     position: relative;
@@ -74,8 +73,7 @@
             width: 80px;
             height: 29px;
             background-color: $colour-tertiary;
-            display: flex;
-            justify-content: center;
+            @include flexJustCenter;
             align-items: center;
             color: #008766;
             border-radius: 2px;

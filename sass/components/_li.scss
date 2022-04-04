@@ -1,7 +1,6 @@
 .fonctionnement ol{
-    display: flex;
+    @include flexJustCenter;
     flex-wrap: wrap;
-    justify-content: center;
     row-gap: 26px;
     li{
         display: flex;
@@ -16,8 +15,7 @@
     }
     li:before{
         content:'';
-        display: flex;
-        justify-content: center;
+        @include flexJustCenter;
         align-items: center;
         width: 24px;
         height: 24px;

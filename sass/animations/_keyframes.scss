@@ -1,0 +1,72 @@
+@keyframes spread{
+    from{
+        opacity: 0;
+        margin-top: 5px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 14px;
+    }
+}
+
+@keyframes grow{
+    0%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 0%, transparent 0%);}
+    10%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 10%, transparent 10%);}
+    20%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 20%, transparent 20%);}
+    30%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 30%, transparent 30%);}
+    40%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 40%, transparent 40%);}
+    50%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 50%, transparent 50%);}
+    60%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 60%, transparent 60%);}
+    70%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 70%, transparent 70%);}
+    80%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 80%, transparent 80%);}
+    90%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 90%, transparent 90%);}
+    100%{background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%, transparent 100%);}
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(calc(360deg * var(--sens)))
+    }
+}
+
+@keyframes rotateTranslate{
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%,-50%) rotate(calc(360deg * var(--sens)));
+    }
+}
+
+@keyframes polygon{
+    from{
+        clip-path: polygon(-100% -100%, 200% -100%, 50% 50%, -100% 200%);
+    }
+    50%{
+        clip-path: polygon(-100% -100%, 50% -100%, 50% 50%, -100% 50%);
+    }
+    to{
+        clip-path: polygon(-100% -100%, 200% -100%, 50% 50%, -100% 200%);
+    }
+}
+
+@keyframes z-indexTo-1{
+    from{
+        z-index: 1;
+    }
+    to{
+        z-index: -1;
+    }
+}
+
+@keyframes visibilityToV{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+}

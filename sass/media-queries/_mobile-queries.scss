@@ -11,9 +11,8 @@
         width: 50%;
     }
     .main.menu{
-        display: flex;
+        @include flexJustCenter;
         flex-wrap: wrap;
-        justify-content: center;
         align-items: flex-start;
         h1{
             text-align: center;
