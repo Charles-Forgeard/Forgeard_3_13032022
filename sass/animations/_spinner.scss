@@ -1,13 +1,13 @@
-body.menu > *{
+body:not(.menu) > *{
     visibility: hidden;
     animation: 0s linear 3s forwards visibilityToV;
 }
 
-body.menu .spinnerContainer, body.menu .spinnerContainer *{
+body:not(.menu) .spinnerContainer, body:not(.menu) .spinnerContainer *{
     visibility: visible;
 }
 
-body.menu .spinnerContainer{
+body:not(.menu) .spinnerContainer{
     position: fixed;
     top: 50vh; 
     left: 50vw;
