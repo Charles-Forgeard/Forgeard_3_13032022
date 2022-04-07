@@ -167,6 +167,10 @@ footer .regular {
   height: 16px;
 }
 
+.svg-Clipath-source {
+  position: absolute;
+}
+
 #heartClipPath path {
   transform: scale(0.00455, 0.00535) translate(-7%, -13.5%);
 }
@@ -303,7 +307,7 @@ footer .regular {
   align-self: center;
   transform: translateY(-29%);
 }
-.card img[src*=stil] {
+.card img[src*=la-note-enchantee] {
   width: 101.5%;
   transform: translateY(-15.5%);
 }
@@ -366,10 +370,10 @@ img.menu {
   width: 110%;
   flex-shrink: 0;
 }
-img.menu[src*=louis-hansel-shotsoflouis] {
+img.menu[src*=le-delice-des-sens] {
   width: 107%;
 }
-img.menu[src*=stil] {
+img.menu[src*=la-note-enchantee] {
   width: 100%;
   align-self: center;
 }
