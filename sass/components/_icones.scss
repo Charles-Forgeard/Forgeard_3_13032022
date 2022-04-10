@@ -1,30 +1,32 @@
 .icone.mobile{
-    width: 13px;
-    height: 20px;
+    font-size: 20px;
+    transform: scale(calc(13 / 14),1);
+    &::before{
+        content: "\e004";
+    }
 }
 
-.icone.essaiList{
+.icone.list{
     width: 17px;
     height: 17px;
 }
 
-.icone.store{
-    width: 18px;
-    height: 18px;
+i.icone.store{
+    font-size: 18px;
+    transform: scale(calc(18 / 20),1);
     color: $colour-primary;
-    path{
-        transform-origin: center;
-        transform: scale(1.06,1.125);
+    &::before{
+        content: "\e005";
     }
 }
 
 .icone.GPS{
     width: 12px;
     height: 16px;
-}
-
-.svg-Clipath-source{
-    position: absolute;
+    color: $colour-footer-background;
+    &::before{
+        content: "\e001";
+    }
 }
 
 #heartClipPath path{
@@ -59,19 +61,58 @@
     }
 }
 
-.fonctionnement svg{
+.fonctionnement{
+    li *:first-child{
     position: absolute;
     left: calc(3400% / 323);
+    }
+}
+
+footer .icone{
+    width: 12px;
+    font-size: 13px;
+    display: inline-block;
 }
 
 .icone.handshake{
-    width: 16px;
-    height: 16px;
-    vertical-align: bottom;
+    transform: scale(calc(11 / 16),1);
+    vertical-align: middle;
+    &::before{
+        content: "\e003";
+    }
 }
 
 .icone.utensils{
-    width: 16px;
-    height: 13px;
     vertical-align: baseline;
+    &::before{
+        content: "\e002";
+    }
 }
+
+.icone.leftArrow{
+    font-weight: 600;
+    font-size: 24px;
+    &::before{
+        content: "\e006";
+    }
+}
+
+.i.fa-solid\:map-marker-alt
+    
+    .i.fa-solid\:utensils
+    
+    .i.fa6-solid\:mobile-screen-button
+    
+    .i.ic\:round-arrow-back
+    
+    .i.ic\:round-check-circle:before {
+    content: "\e007";
+    }
+    
+    .i.ph\:heart-straight:before {
+    content: "\e008";
+    }
+    
+    .i.ph\:heart-straight-duotone:before {
+    content: "\e009";
+    }

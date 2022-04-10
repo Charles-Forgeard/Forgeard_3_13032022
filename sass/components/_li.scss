@@ -1,38 +1,43 @@
-.fonctionnement ol{
-    @include flexJustCenter;
-    flex-wrap: wrap;
-    row-gap: 26px;
-    li{
-        display: flex;
-        align-items: center;
-        padding: 0 calc(2100% / 323) 0 calc(7400% / 323);
-        width: 323px;
-        height: 72px;
-        background-color: $colour-background;
-        border-radius: 17px;
-        margin-left: 12px;
-        position: relative;
+.fonctionnement{
+    .icone{
+        color: $colour-iconeGrey;
     }
-    li:before{
-        content:'';
+    ol{
         @include flexJustCenter;
-        align-items: center;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        color: white;
-        position: absolute;
-        left: 0;
-        background-color: $colour-primary;
-        transform: translateX(-50%);
-    }
-    li:first-child:before{
-        content:'1';
-    }
-    li:nth-child(2):before{
-        content:'2';
-    }
-    li:nth-child(3):before{
-        content:'3';
+        flex-wrap: wrap;
+        row-gap: 26px;
+        li{
+            display: flex;
+            align-items: center;
+            padding: 0 calc(2100% / 323) 0 calc(7400% / 323);
+            width: 323px;
+            height: 72px;
+            background-color: $colour-background;
+            border-radius: 17px;
+            margin-left: 12px;
+            position: relative;
+        }
+        li:before{
+            content:'';
+            @include flexJustCenter;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            color: white;
+            position: absolute;
+            left: 0;
+            background-color: $colour-primary;
+            transform: translateX(-50%);
+        }
+        li:first-child:before{
+            content:'1';
+        }
+        li:nth-child(2):before{
+            content:'2';
+        }
+        li:nth-child(3):before{
+            content:'3';
+        }
     }
 }

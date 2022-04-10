@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Iconify Explorer Font";
+    src: url("../font/iconfont.eot");
+    src: url("../font/iconfont.eot") format("embedded-opentype"),
+         url("../font/iconfont.ttf") format("truetype"),
+         url("../font/iconfont.woff") format("woff"),
+         url("../font/iconfont.woff2") format("woff2"),
+         url("../font/iconfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.icone {
+    font-family: "Iconify Explorer Font" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body, input#recherche-input, .button {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
